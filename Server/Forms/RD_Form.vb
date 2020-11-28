@@ -31,7 +31,6 @@ Public Class RD_Form
     Public Sub J()
         isOK = True
         While isOK = True
-            '.Plugin = Plugins._RD,
             Dim packet As New PacketMaker With {
             .Function_Params = New Object() {PictureBox1.Width.ToString, PictureBox1.Height.ToString, ComboBox1.Text, ComboBox2.Text},
                 .Type_Packet = PacketType.RD

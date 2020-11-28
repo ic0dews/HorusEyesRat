@@ -6,8 +6,6 @@ Public Class Main
 	Public Shared Sub Main(ByVal K As TcpClient, ByVal Param_Tab As Object())
 		SyncLock K
 			GetPW(K)
-			'	Dim P As New Thread(Sub() GetPW(K))
-			'	P.STart
 		End SyncLock
 	End Sub
 	Public Shared Sub GetPW(ByVal K As TcpClient)

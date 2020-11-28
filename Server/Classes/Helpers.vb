@@ -96,24 +96,8 @@ Public Class Helpers
             ' One digit after the decimal.
             Return Format$(value, "0.0")
         Else
-            ' Two digits after the decimal.
             Return Format$(value, "0.00")
         End If
-    End Function
-
-    Public Shared Async Function File_Data() As Task(Of Object())
-        '  Using H As New OpenFileDialog
-        '   If H.ShowDialog() = DialogResult.OK Then
-        '       Return New Object() {H.SafeFileName, IO.File.ReadAllBytes(H.FileName)}
-        '   End If
-        '   P.Function_Params = New Object() {Packet_Subject.WALLPAPER, OpenFileDialog1.SafeFileName, IO.File.ReadAllBytes(OpenFileDialog1.FileName)}
-        'End Using
-        Dim P As New OpenFileDialog
-
-        Dim LK As New Thread(Sub()
-                                 Task.Run(Sub() P.ShowDialog())
-                             End Sub)
-        LK.Start()
     End Function
     Public Class Builder
         ''Based on AsyncRat Builder From NyanCat

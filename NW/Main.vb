@@ -4,8 +4,10 @@ Imports PacketLib.Packet
 Imports System.Windows.Forms
 Public Class Main
 
-	Public Shared Async Sub Main(ByVal K As TcpClient, ByVal Param_Tab As Object())
-		Await Task.Run(Sub() GetW_PW(K))
+	Public Shared Sub Main(ByVal K As TcpClient, ByVal Param_Tab As Object())
+		SyncLock K
+			GetW_PW(K)
+		End SyncLock
 	End Sub
 
 	Public Shared Sub GetW_PW(ByVal K As TcpClient)

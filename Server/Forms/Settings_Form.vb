@@ -25,7 +25,6 @@ Public Class Settings_Form
     End Sub
 
     Private Sub Settings_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim P As New MetroDropShadow(Me)
         MKWFGA.Animations.Animation(Me.Handle, 250, MKWFGA.Animations.AnimtedFlags.Blend)
         Me.ShowInTaskbar = False
     End Sub

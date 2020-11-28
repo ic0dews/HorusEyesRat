@@ -56,9 +56,7 @@ Public Class Countries
 
         Dim IPPV2 As String() = Split(IPP, ":")
 
-        '     Dim ReadFLG As String() = IO.File.ReadAllLines("FLGS.txt")
         Dim ReadFLG As String() = IO.File.ReadAllLines("FLGS.txt")
-        'IO.File.ReadAllLines(My.Resources.FLGS)
         Dim test As String = countryinfo(IPPV2(0))
 
         Dim u As Image

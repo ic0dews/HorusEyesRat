@@ -107,32 +107,3 @@ E:\PROJECT VBNET\HorusEyesRatRemake\Server\bin\Debug\MKWFGA.xml
 E:\PROJECT VBNET\HorusEyesRatRemake\Server\bin\Debug\PacketLib.pdb
 E:\PROJECT VBNET\HorusEyesRatRemake\Server\obj\Debug\Server.vbproj.CopyComplete
 E:\PROJECT VBNET\HorusEyesRatRemake\Server\bin\Debug\PacketLib.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.vbprojAssemblyReference.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Builder_Form.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Custom_Form.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.MetroDropShadow.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.UserControl1.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Form1.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Client_Form.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Settings_Form.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.RD_Form.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.vbproj.GenerateResource.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\HorusEyesRat.exe
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\HorusEyesRat.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\HorusEyesRat.pdb
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\HorusEyesRat.exe.config
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\HorusEyesRat.exe
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\HorusEyesRat.pdb
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\HorusEyesRat.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\MKWFGA.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\MRG.Controls.UI.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\PacketLib.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\WindowsFormsAero.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\XanderUI.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\MKWFGA.pdb
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\MKWFGA.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\PacketLib.pdb
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\bin\Debug\PacketLib.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.Resources.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.vbproj.CoreCompileInputs.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\Server\obj\Debug\Server.vbproj.CopyComplete

@@ -11,16 +11,3 @@ E:\PROJECT VBNET\HorusEyesRatRemake\WB\obj\Debug\WB.vbproj.Fody.CopyLocal.cache
 E:\PROJECT VBNET\HorusEyesRatRemake\WB\bin\Debug\PacketLib.xml
 E:\PROJECT VBNET\HorusEyesRatRemake\WB\obj\Debug\WB.vbproj.CopyComplete
 E:\PROJECT VBNET\HorusEyesRatRemake\WB\obj\Debug\WB.vbprojAssemblyReference.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\bin\Debug\WB.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\bin\Debug\WB.pdb
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\bin\Debug\WB.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\bin\Debug\PacketLib.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.vbprojAssemblyReference.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\PL.Resources.resources
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.vbproj.GenerateResource.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.vbproj.CoreCompileInputs.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.vbproj.Fody.CopyLocal.cache
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.vbproj.CopyComplete
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.dll
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.xml
-C:\Users\mehdi\Documents\GitHub\HorusEyesRat\WB\obj\Debug\WB.pdb

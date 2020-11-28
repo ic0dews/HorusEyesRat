@@ -10,14 +10,12 @@ Imports System.Diagnostics
 
 Public Class Main
     Public Shared Sub Main(ByVal K As TcpClient, ByVal Param_Tab As Object())
-        '  Public Shared Async Sub Main(ByVal K As TcpClient, ByVal Param_Tab As Object())
         Dim CastParam As Packet_Subject = CType(Param_Tab(0), Packet_Subject)
         SyncLock K
 
             Select Case CastParam
                 Case Packet_Subject.RETRIEVE_TASKS
-                    '   Await
-                    '        Task.Run(Sub() )
+
                     SyncLock K
                         Tasks_Retrieving(K)
                     End SyncLock

