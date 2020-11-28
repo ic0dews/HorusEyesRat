@@ -26,5 +26,5 @@ Features:
 
 <img src="https://i.postimg.cc/2SG9K5Hb/Capture-d-cran-250.png"/>
 <img src="https://i.postimg.cc/bvFCqBfq/Capture-d-cran-251.png"/>
-<img src="https://i.postimg.cc/bvFCqBfq/Capture-d-cran-252.png"/>
+<img src="https://i.postimg.cc/9ffg5jSx/Capture-d-cran-252.png"/>
 
